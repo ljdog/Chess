@@ -776,8 +776,8 @@ com.args={
 	'z':{text:"兵", img:'r_z', my:1 ,bl:"z", value:com.value.z},
 	
 	//蓝子
-	'C':{text:"�", img:'b_c', my:-1 ,bl:"c", value:com.value.C},
-	'M':{text:"�R", img:'b_m', my:-1 ,bl:"m", value:com.value.M},
+	'C':{text:"車", img:'b_c', my:-1 ,bl:"c", value:com.value.C},
+	'M':{text:"馬", img:'b_m', my:-1 ,bl:"m", value:com.value.M},
 	'X':{text:"象", img:'b_x', my:-1 ,bl:"x", value:com.value.X},
 	'S':{text:"士", img:'b_s', my:-1 ,bl:"s", value:com.value.S},
 	'J':{text:"帅", img:'b_j', my:-1 ,bl:"j", value:com.value.J},

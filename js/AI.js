@@ -6,13 +6,13 @@ AI.historyTable	=	{};		//历史表
 
 
 //人工智能初始化
-AI.init = function(pace){
+AI.init = function(pace) {
 	var bill = AI.historyBill || com.gambit; //开局库
 	if (bill.length){
 		var len=pace.length;
 		var arr=[];
 		//先搜索棋谱
-		for (var i=0;i< bill.length;i++){
+		for (var i=0;i< bill.length;i++) {
 			if (bill[i].slice(0,len)==pace) {
 			arr.push(bill[i]);
 			}
@@ -137,7 +137,7 @@ AI.getMoves = function (map, my){
 	return moves;
 }
 //A:当前棋手value/B:对手value/depth：层级
-AI.getAlphaBeta = function (A, B, depth, map ,my) { 
+AI.getAlphaBeta = function (A, B, depth, map ,my) {
 	//var txtMap= map.join();
 	//var history=AI.historyTable[txtMap];
 	//	if (history && history.depth >= AI.treeDepth-depth+1){
@@ -150,8 +150,6 @@ AI.getAlphaBeta = function (A, B, depth, map ,my) {
 　	//这里排序以后会增加效率
 
 	for (var i=0; i < moves.length; i++) {
-		
-		
 　　	//走这个走法;
 		var move= moves[i];
 		var key = move[4];
@@ -191,14 +189,14 @@ AI.getAlphaBeta = function (A, B, depth, map ,my) {
 				 map[ newY ][ newX ] = clearKey;
 				 //play.mans[ clearKey ].isShow = true;
 			}
-	　　	if (val >= B) { 
+	　　	if (val >= B) {
 				//将这个走法记录到历史表中; 
 				//AI.setHistoryTable(txtMap,AI.treeDepth-depth+1,B,my);
 				return {"key":key,"x":newX,"y":newY,"value":B}; 
 			} 
-			if (val > A) { 
-	　　　　	A = val; //设置最佳走法; 
-				if (AI.treeDepth == depth) var rootKey={"key":key,"x":newX,"y":newY,"value":A};
+			if (val > A) {
+	　　　　      A = val; //设置最佳走法; 
+			    if (AI.treeDepth == depth) var rootKey={"key":key,"x":newX,"y":newY,"value":A};
 			} 
 		} 
 　	} 
